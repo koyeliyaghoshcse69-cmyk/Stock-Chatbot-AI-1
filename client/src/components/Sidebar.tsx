@@ -79,7 +79,7 @@ export function Sidebar() {
         </div>
       </nav>
 
-      <div className="p-4 border-t border-border/50 space-y-2">
+      <div className="p-4 border-t border-border/50">
         <button 
           onClick={handleClearChat}
           disabled={isClearing}
@@ -87,10 +87,6 @@ export function Sidebar() {
         >
           <Trash2 className="w-4 h-4" />
           Clear History
-        </button>
-        <button className="flex w-full items-center gap-3 px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-xl transition-all duration-200">
-          <Settings className="w-4 h-4" />
-          Settings
         </button>
       </div>
     </aside>
