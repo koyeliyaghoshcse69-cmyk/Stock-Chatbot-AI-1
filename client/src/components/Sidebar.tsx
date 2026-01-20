@@ -29,13 +29,24 @@ export function Sidebar() {
     }
   };
 
+  const handleNewChat = () => {
+    clearChat(undefined, {
+      onSuccess: () => {
+        toast({
+          title: "New Chat Started",
+          description: "Previous history has been cleared.",
+        });
+      }
+    });
+  };
+
   const navItems = [
     { icon: MessageSquare, label: "Chat", href: "/" },
   ];
 
   return (
     <aside className="hidden md:flex flex-col w-64 h-screen border-r border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0">
-      <div className="p-6 border-b border-border/50">
+      <div className="p-6 border-b border-border/50 cursor-pointer hover:bg-secondary/50 transition-colors" onClick={handleNewChat}>
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-primary/60 flex items-center justify-center shadow-lg shadow-primary/20">
             <TrendingUp className="w-5 h-5 text-white" />
