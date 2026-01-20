@@ -1,0 +1,75 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+7:21:25 AM [express] serving on port 5000
+7:21:34 AM [express] GET /api/messages 200 in 25ms :: []
+7:21:48 AM [express] GET /api/messages 200 in 17ms :: []
+AI Error: BadRequestError: 400 The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+    at Function.generate (/home/runner/workspace/node_modules/openai/src/core/error.ts:72:14)
+    at OpenAI.makeStatusError (/home/runner/workspace/node_modules/openai/src/client.ts:478:28)
+    at OpenAI.makeRequest (/home/runner/workspace/node_modules/openai/src/client.ts:728:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:47:26) {
+  status: 400,
+  headers: Headers {
+    date: 'Tue, 20 Jan 2026 07:22:01 GMT',
+    'content-type': 'application/json',
+    'content-length': '275',
+    connection: 'keep-alive',
+    'cf-ray': '9c0cd17fb947e810-ORD',
+    'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate',
+    vary: 'Origin',
+    'x-groq-region': 'msp',
+    'x-request-id': 'req_01kfd4gaz2f0vabhrgqz4mcsxp',
+    'cf-cache-status': 'DYNAMIC',
+    'set-cookie': '__cf_bm=eOWTkCmOljApZPIOobWpe0coScbTYmU2I_SpDgiVO6o-1768893721-1.0.1.1-1t.VuIHtgu15alR822HU69hKYCPrOMb3aXsLNxPOxjkeYta8kYGl6acCzMqYO43pSRJ5pW72hc.gOW.TryTBJoWrdRbveYSmtCBhRYFivJM; path=/; expires=Tue, 20-Jan-26 07:52:01 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None',
+    'strict-transport-security': 'max-age=15552000',
+    server: 'cloudflare',
+    'alt-svc': 'h3=":443"; ma=86400'
+  },
+  requestID: 'req_01kfd4gaz2f0vabhrgqz4mcsxp',
+  error: {
+    message: 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.',
+    type: 'invalid_request_error',
+    code: 'model_decommissioned'
+  },
+  code: 'model_decommissioned',
+  param: undefined,
+  type: 'invalid_request_error'
+}
+7:22:01 AM [express] POST /api/chat 500 in 151ms :: {"message":"Failed to process chat request"}
+AI Error: BadRequestError: 400 The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+    at Function.generate (/home/runner/workspace/node_modules/openai/src/core/error.ts:72:14)
+    at OpenAI.makeStatusError (/home/runner/workspace/node_modules/openai/src/client.ts:478:28)
+    at OpenAI.makeRequest (/home/runner/workspace/node_modules/openai/src/client.ts:728:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:47:26) {
+  status: 400,
+  headers: Headers {
+    date: 'Tue, 20 Jan 2026 07:22:16 GMT',
+    'content-type': 'application/json',
+    'content-length': '275',
+    connection: 'keep-alive',
+    'cf-ray': '9c0cd1dba857eb69-ORD',
+    'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate',
+    vary: 'Origin',
+    'x-groq-region': 'msp',
+    'x-request-id': 'req_01kfd4gsawf2ds61j5heqm0fr2',
+    'cf-cache-status': 'DYNAMIC',
+    'set-cookie': '__cf_bm=6AdfVrI8itVd8fkNfcv8yFXczQ136bVd8XHNBAe26yk-1768893736-1.0.1.1-oBEda1VSNmv5ow5RTg2g4A8_WQEp2QwbAfHb4AsrcY7ZzEvvTwu8U.0Mew3PUYHR52_pnEURFFtoEyPiMOFOsledtgNyFohSdhUNWEKJWNc; path=/; expires=Tue, 20-Jan-26 07:52:16 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None',
+    'strict-transport-security': 'max-age=15552000',
+    server: 'cloudflare',
+    'alt-svc': 'h3=":443"; ma=86400'
+  },
+  requestID: 'req_01kfd4gsawf2ds61j5heqm0fr2',
+  error: {
+    message: 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.',
+    type: 'invalid_request_error',
+    code: 'model_decommissioned'
+  },
+  code: 'model_decommissioned',
+  param: undefined,
+  type: 'invalid_request_error'
+}
+7:22:16 AM [express] POST /api/chat 500 in 132ms :: {"message":"Failed to process chat request"}

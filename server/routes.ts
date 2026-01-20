@@ -49,7 +49,7 @@ export async function registerRoutes(
           { role: "system", content: "You are a helpful and knowledgeable AI assistant focused on stocks, finance, and market analysis. Provide concise, accurate, and insightful answers. If you don't know something, admit it. Do not provide financial advice as professional advice, but as informational content." },
           ...messagesForAi
         ],
-        model: "llama3-8b-8192", // Common efficient model on Groq
+        model: "llama-3.3-70b-versatile", // Updated model since llama3-8b-8192 is decommissioned
       });
 
       const aiResponseContent = completion.choices[0]?.message?.content || "I apologize, but I couldn't generate a response.";
