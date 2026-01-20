@@ -65,10 +65,10 @@ export default function Chat() {
   };
 
   return (
-    <div className="flex h-screen bg-transparent text-foreground overflow-hidden">
+    <div className="flex h-screen bg-transparent text-foreground overflow-y-auto overflow-x-hidden">
       <Sidebar />
       
-      <main className="flex-1 flex flex-col h-full relative">
+      <main className="flex-1 flex flex-col min-h-screen relative">
         <header className="md:hidden flex items-center justify-between p-4 border-b border-border bg-background/80 backdrop-blur z-10 sticky top-0 cursor-pointer" onClick={handleNewChat}>
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-primary/60 flex items-center justify-center shadow-lg shadow-primary/20">
