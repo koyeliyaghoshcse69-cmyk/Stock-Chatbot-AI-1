@@ -45,11 +45,12 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
+    @apply text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
     font-family: var(--font-body);
-    background: radial-gradient(circle at top left, hsl(151 55% 15% / 0.15), transparent 40%),
-                radial-gradient(circle at bottom right, hsl(151 55% 10% / 0.1), transparent 40%),
-                hsl(var(--background));
+    background-color: hsl(var(--background));
+    background-image: linear-gradient(to bottom, hsl(var(--background) / 0.8), hsl(var(--background) / 0.95)), url('/images/stock-bg.png');
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
   }
 
