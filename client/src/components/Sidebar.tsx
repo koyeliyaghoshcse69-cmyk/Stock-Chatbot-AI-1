@@ -31,9 +31,6 @@ export function Sidebar() {
 
   const navItems = [
     { icon: MessageSquare, label: "Chat", href: "/" },
-    { icon: TrendingUp, label: "Market Overview", href: "/market" },
-    { icon: Wallet, label: "Portfolio", href: "/portfolio" },
-    { icon: BarChart3, label: "Analysis", href: "/analysis" },
   ];
 
   return (
@@ -68,15 +65,6 @@ export function Sidebar() {
               <span className="font-medium">{item.label}</span>
             </Link>
           ))}
-        </div>
-        
-        <div>
-          <p className="px-4 text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 font-mono">
-            Watchlist
-          </p>
-          <div className="px-4 py-2 text-sm text-muted-foreground italic">
-            Connect wallet to view
-          </div>
         </div>
       </nav>
 

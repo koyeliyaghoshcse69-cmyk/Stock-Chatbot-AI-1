@@ -11,9 +11,6 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Chat} />
-      <Route path="/market" component={ComingSoon} />
-      <Route path="/portfolio" component={ComingSoon} />
-      <Route path="/analysis" component={ComingSoon} />
       <Route component={NotFound} />
     </Switch>
   );
